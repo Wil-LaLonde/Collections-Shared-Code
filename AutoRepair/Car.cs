@@ -13,8 +13,7 @@
             repairList = new List<Repair>();
         }
 
-        public void AddRepair(DateTime date, string description, double amount) {
-            Repair repair = new Repair(date, description, amount);
+        public void AddRepair(Repair repair) {
             repairList.Add(repair);
         }
         
@@ -42,6 +41,10 @@
                 }
             }
             return latestRepair;
+        }
+
+        public void RemoveRepair(Repair repair) {
+            repairList.Remove(repair);
         }
     }
 }
